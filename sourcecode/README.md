@@ -53,3 +53,22 @@ hal@termserver-rpi:~/ttyd/ttyd/build $ ./ttyd bash
 [2022/08/30 12:23:05:5706] N:  Using foreign event loop...
 [2022/08/30 12:23:05:5711] N:  Listening on port: 7681
 ```
+# Install NGINX web server
+
+Used as web page with links to different serial port web terminals and to translate from devices to port numbers.
+* [https://pimylifeup.com/raspberry-pi-nginx/ Build your own Raspberry Pi NGINX Web Server &#45; Pi My Life Up]
+```
+<pre>
+hal@termserver-rpi:~ $ sudo apt update
+...
+hal@termserver-rpi:~ $ sudo apt upgrade
+...
+hal@termserver-rpi:~ $ sudo apt install nginx
+...
+hal@termserver-rpi:~ $ sudo systemctl start nginx
+```
+The test page is here:
+```
+hal@termserver-rpi:~ $ ls /var/www/html
+index.nginx-debian.html
+```
