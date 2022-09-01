@@ -5,6 +5,7 @@ A Raspberry Pi based terminal server with a web interface.
 
 Created ~/ttyd to work in.
 
+Installed Nginx web server and proxy and minicom terminal emulator.
 Used ttyd built from source.
 
 Create shell script that start 4 instances of minicom using the ttyUSB ports connected to the RPi.
