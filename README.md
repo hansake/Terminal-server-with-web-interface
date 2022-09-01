@@ -1,30 +1,14 @@
 # Terminal-server-with-web-interface
 A Raspberry Pi based terminal server with a web interface.
 
-```
-Install and configure ttyd
+## Install and configure ttyd
 
-2022-08-28
-
-See also: General_Linux_Information#Linux_Terminal_on_Web_Browser
-
-Check with pre-built binary.
-
-hal@termserver-rpi:~ $ dpkg --print-architecture
-armhf
-
-2022-08-29
-
-Downloaded ttyd.arm from Releases · tsl0922/ttyd
-
-Created ~/ttyd and moved ttyd.arm to this directory.
-
-2022-08-31
+Created ~/ttyd to work in.
 
 Used ttyd built from source.
 
 Create shell script that start 4 instances of minicom using the ttyUSB ports connected to the RPi.
-
+```
 hal@termserver-rpi:~/ttyd $ cat ttyd_start.sh
 # Starting ttyd instances
 /home/hal/ttyd/ttyd/build/ttyd -p 7681 -w /home/hal bash > /home/hal/ttyd/console.log 2>&1 &
@@ -43,13 +27,13 @@ Select an editor.  To change later, run 'select-editor'.
 
 Choose 1-3 [1]: 1
 crontab: installing new crontab
-
-added the line
-
+```
+Added the line to the crontab:
+```
 @reboot /home/hal/ttyd/ttyd_start.sh
-
+```
 Nginx configuretion:
-
+```
 hal@termserver-rpi:~/ttyd $ cat /etc/nginx/sites-available/termserver
 # Terminal server configuration
 #
@@ -106,9 +90,9 @@ server {
 hal@termserver-rpi:~/ttyd $ sudo service nginx configtest
 Testing nginx configuration:.
 hal@termserver-rpi:~/ttyd $ sudo service nginx reload
-
-Web page:
-
+```
+Web page to open the terminals:
+```
 hal@termserver-rpi:~ $ cat /var/www/html/index.html
 <!DOCTYPE html>
 <html>
@@ -139,4 +123,3 @@ body {
 </body>
 </html>
 ```
-
