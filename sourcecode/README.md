@@ -56,7 +56,7 @@ hal@termserver-rpi:~/ttyd/ttyd/build $ ./ttyd bash
 # Install NGINX web server
 
 Used as web page with links to different serial port web terminals and to translate from devices to port numbers.
-* [https://pimylifeup.com/raspberry-pi-nginx/ Build your own Raspberry Pi NGINX Web Server &#45; Pi My Life Up]
+[Build your own Raspberry Pi NGINX Web Server - Pi My Life Up](https://pimylifeup.com/raspberry-pi-nginx/)
 ```
 <pre>
 hal@termserver-rpi:~ $ sudo apt update
