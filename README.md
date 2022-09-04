@@ -1,6 +1,9 @@
 # Terminal-server-with-web-interface
 A Raspberry Pi based terminal server with a web interface.
 
+
+![Terminal server](pictures/Terminal_server.png?raw=true)
+
 ## Install and configure ttyd
 
 Created ~/ttyd to work in.
