@@ -30,7 +30,7 @@ Added the line to the crontab:
 ```
 @reboot /home/hal/ttyd/ttyd_start.sh
 ```
-Nginx configuretion:
+Nginx configuration:
 ```
 hal@termserver-rpi:~/ttyd $ cat /etc/nginx/sites-available/termserver
 # Terminal server configuration
