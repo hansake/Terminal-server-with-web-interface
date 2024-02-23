@@ -54,7 +54,6 @@ hal@termserver-rpi:~/ttyd/ttyd/build $ ./ttyd bash
 [2022/08/30 12:23:05:5711] N:  Listening on port: 7681
 ```
 # Install NGINX web server
-
 Used as web page with links to different serial port web terminals and to translate from devices to port numbers.
 [Build your own Raspberry Pi NGINX Web Server - Pi My Life Up](https://pimylifeup.com/raspberry-pi-nginx/)
 ```
@@ -72,3 +71,13 @@ The test page is here:
 hal@termserver-rpi:~ $ ls /var/www/html
 index.nginx-debian.html
 ```
+# How to get ZMODEM to work
+It was not possible to get ZMODEM file transfer using a serial tty device
+together with ttyd.
+
+With a very simple program called serport I made this possible:
+[hansake/serport: Connects serial tty device to STDIO. To be used with ttyd.](https://github.com/hansake/serport)
+
+A modified ttyd to get hex and ASCII dumps of the data traffic I discovered why
+ZMODEN did not initially work:
+[hansake/ttyd: Share your terminal over the web](https://github.com/hansake/ttyd/tree/main)
